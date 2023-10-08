@@ -1,10 +1,11 @@
 import tweepy
+from decouple import config
 
-# Twitter API credentials
-consumer_key = 'YOUR_CONSUMER_KEY'
-consumer_secret = 'YOUR_CONSUMER_SECRET'
-access_token = 'YOUR_ACCESS_TOKEN'
-access_token_secret = 'YOUR_ACCESS_TOKEN_SECRET'
+# Authenticate with the Twitter API using environment variables
+consumer_key = config('TWITTER_CONSUMER_KEY')
+consumer_secret = config('TWITTER_CONSUMER_SECRET')
+access_token = config('TWITTER_ACCESS_TOKEN')
+access_token_secret = config('TWITTER_ACCESS_TOKEN_SECRET')
 
 # Authenticate with the Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)

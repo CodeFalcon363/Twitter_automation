@@ -88,7 +88,21 @@ Here are some examples of how to use the functions:
     username_to_follow = 'user_to_follow'  # Replace with the username you want to follow
     follow_user(username_to_follow)
 
-## Error Hanling
+## Error Handling
+
+This Twitter automation tool includes error handling to gracefully handle potential issues that may arise during interactions with the Twitter API. Here's a brief explanation of how errors are managed in the code:
+
+- **Posting a Tweet**: If there's an error while posting a tweet, such as exceeding character limits or connectivity problems, the code will catch the exception and display an error message.
+
+- **Posting a Tweet with Media**: When posting a tweet with media (image or video), the code uploads the media and posts the tweet. If any errors occur during this process, such as media upload failures, it will be caught, and an error message will be displayed.
+
+- **Liking a Tweet**: If there's an issue when attempting to like a tweet by its ID, such as the tweet being unavailable or already liked, the code will catch the exception and provide an error message.
+
+- **Looking Up User(s)**: If there's a problem while looking up user(s) by their usernames, such as invalid usernames or network errors, the code will capture the exception and display an error message.
+
+- **Following a User**: When trying to follow a user by their username, if any issues occur, such as the user not existing or being unreachable, the code will handle the exception and print an error message.
+
+In each case, the code uses the `tweepy.errors.TweepyException` class to capture and handle errors. This ensures that the program continues running smoothly even when errors are encountered, providing informative error messages for troubleshooting.
 
 ## Contribution
 
