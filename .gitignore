@@ -1,0 +1,10 @@
+# Ignore Python virtual environments
+venv/
+env/
+
+# Ignore text editor files
+.vscode/
+.idea/
+
+# Ignore package dependencies
+node_modules/
