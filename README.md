@@ -73,20 +73,23 @@ follow_user(username): Follows a user by their username.
 
 Here are some examples of how to use the functions:
 
-    tweet_text = "Hello, Twitter! This is a test tweet."
-    post_tweet(tweet_text)
+   from twitter_automation import *
 
-    media_path = 'media/path.jpg'  # Replace with the actual path to your image file
-    post_tweet_with_media("Check out this cool image!", media_path)
+  # Post a tweet
+  post_tweet("Hello, Twitter!")
 
-    tweet_id_to_like = 'TWEET_ID_TO_LIKE'
-    like_tweet(tweet_id_to_like)
+  # Post a tweet with media
+  post_media_tweet("Check out this cool image!", "path/to/image.jpg")
 
-    usernames_to_lookup = ['user1', 'user2']  # Replace with the usernames you want to look up
-    lookup_users(usernames_to_lookup)
+  # Like a tweet by its ID
+  like_tweet(tweet_id)
 
-    username_to_follow = 'user_to_follow'  # Replace with the username you want to follow
-    follow_user(username_to_follow)
+  # Look up a user
+  user_lookup("username")
+
+  # Follow a user
+  follow_user("username")
+
 
 ## Error Handling
 

@@ -56,3 +56,21 @@ def follow_user(username):
         print(f"Followed user: @{username}")
     except tweepy.errors.TweepyException as e:
         print(f"Error following user: {e}")
+
+if __name__ == "__main__":
+#Here are some examples of how to use the functions:
+
+    tweet_text = "Hello, Twitter! This is a test tweet."
+    post_tweet(tweet_text)
+
+    media_path = 'media/path.jpg'  # Replace with the actual path to your image file
+    post_tweet_with_media("Check out this cool image!", media_path)
+
+    tweet_id_to_like = 'TWEET_ID_TO_LIKE'
+    like_tweet(tweet_id_to_like)
+
+    usernames_to_lookup = ['user1', 'user2']  # Replace with the usernames you want to look up
+    lookup_users(usernames_to_lookup)
+
+    username_to_follow = 'user_to_follow'  # Replace with the username you want to follow
+    follow_user(username_to_follow)
